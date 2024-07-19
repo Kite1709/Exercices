@@ -1,0 +1,42 @@
+# Le jeu du nombre mystère
+
+import random
+
+print("""--- Le Jeu du Nombre Mystère ---
+      Essaye de trouver le nombre compris entre 1 et 100 (inclus)""")
+
+continuer = ""
+liste_nombres_valides = range(0,101)
+
+while continuer != "stop":
+    nombre_mystere = random.randrange(1, 101)
+    nombre_essai = 5
+    if nombre_essai >= 0:
+        print(f"Il te reste {nombre_essai} essais")
+        reponse = input("Devine le nombre : ")
+
+
+
+
+
+
+
+
+
+    if reponse == nombre_mystere:
+        print("Félicitations ! Tu viens de trouver le nombre mystère !! ")
+        break
+    elif reponse is not liste_nombres_valides:
+        print("Veuillez entrer un nombre entre 1 et 100")
+    elif nombre_mystere < reponse:
+        print(f"Le nombre mystère est plus petit que {reponse}")
+        nombre_essai = nombre_essai -1
+        print(f"Il te reste {nombre_essai} essais")
+    elif nombre_mystere > reponse:
+        priprint(f"Le nombre mystère est plus grand que {reponse}")
+        nombre_essai = nombre_essai -1
+        print(f"Il te reste {nombre_essai} essais")
+    else:
+        input("Perdu, veux-tu arrêter ? Si oui écris : stop. Sinon écris : jouer")
+        break
+
